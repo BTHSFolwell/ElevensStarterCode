@@ -6,20 +6,8 @@ package Activity1;
  * <code>Card</code> represents a playing card.
  */
 public class Card {
-
-    /**
-     * String value that holds the suit of the card
-     */
     private String suit;
-
-    /**
-     * String value that holds the rank of the card
-     */
     private String rank;
-
-    /**
-     * int value that holds the point value.
-     */
     private int pointValue;
 
 
@@ -34,7 +22,9 @@ public class Card {
      *                  containing the point value of the card
      */
     public Card(String cardRank, String cardSuit, int cardPointValue) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
+	    this.rank = rank;
+	    this.suit = suit;
+	    this.value = value;
     }
 
 
@@ -43,8 +33,7 @@ public class Card {
      * @return this <code>Card's</code> suit.
      */
     public String suit() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-
+	    return suit;
     }
 
     /**
@@ -52,8 +41,7 @@ public class Card {
      * @return this <code>Card's</code> rank.
      */
     public String rank() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-
+	    return rank;
     }
 
     /**
@@ -61,7 +49,7 @@ public class Card {
      * @return this <code>Card's</code> point value.
      */
     public int pointValue() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
+	    return pointValue;
 
     }
 
