@@ -60,8 +60,14 @@ public class Card {
      *         false otherwise.
      */
     public boolean matches(Card otherCard) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-
+	    if(otherCard.pointValue!=this.pointValue||otherCard.rank.compareTo(this.rank)!= 0||otherCard.suit.compareTo(this.suit)!= 0)
+	    {
+		    return false;
+	    } 
+	    else
+	    {
+		    return true;
+	    }
     }
 
     /**
@@ -75,9 +81,9 @@ public class Card {
      *         and point value of the card.
      */
     @Override
-    public String toString() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-
+    public String toString()
+    {
+        return "[" + this.rank + "]" + "of" + "[" + this.suit + "]" + "(Point Value = [" + this.pointValue + "])";
     }
 }
 
