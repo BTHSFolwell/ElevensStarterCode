@@ -22,9 +22,9 @@ public class Card {
      *                  containing the point value of the card
      */
     public Card(String cardRank, String cardSuit, int cardPointValue) {
-	    this.rank = rank;
-	    this.suit = suit;
-	    this.value = value;
+	    this.rank = cardRank;
+	    this.suit = cardSuit;
+	    this.pointValue = cardPointValue;
     }
 
 
@@ -60,14 +60,16 @@ public class Card {
      *         false otherwise.
      */
     public boolean matches(Card otherCard) {
-	    if(otherCard.pointValue!=this.pointValue||otherCard.rank.compareTo(this.rank)!= 0||otherCard.suit.compareTo(this.suit)!= 0)
-	    {
-		    return false;
-	    } 
-	    else
-	    {
-		    return true;
-	    }
+        if (rank.equals(otherCard.rank))
+        {
+            if (suit.equals(otherCard.suit))
+            {
+                if (pointValue == otherCard.pointValue){
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     /**
@@ -83,7 +85,7 @@ public class Card {
     @Override
     public String toString()
     {
-        return "[" + this.rank + "]" + "of" + "[" + this.suit + "]" + "(Point Value = [" + this.pointValue + "])";
+        return rank + " of " + suit + " (point value = [" + pointValue + "])";
     }
 }
 
