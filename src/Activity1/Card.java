@@ -21,7 +21,6 @@ public class Card {
 
     public int pointValue() {
 	    return pointValue;
-
     }
 
     public boolean matches(Card otherCard) {
